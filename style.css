@@ -1,0 +1,266 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f5f9f6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 50px; 
+  width: auto;
+}
+
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #2d6a4f;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Ícone Instagram corrigido */
+.icon-instagram {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.icon-instagram i {
+  font-size: 1.3rem;
+}
+
+.icon-instagram:hover {
+  transform: scale(1.15);
+}
+
+.btn-header {
+  background: #2d6a4f;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-header:hover {
+  background: #1b4332;
+}
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 3rem;
+  gap: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  color: #1b4332;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+  background: #40916c;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #1b4332;
+}
+
+.hero-img img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* Seções */
+section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #2d6a4f;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  padding: 1rem;
+  width: 280px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Steps */
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.step {
+  width: 220px;
+}
+
+.step i {
+  font-size: 2rem;
+  color: #2d6a4f;
+  margin-bottom: 0.5rem;
+}
+
+/* Benefícios */
+.grid-beneficios {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.beneficio {
+  background: #fff;
+  border-radius: 15px;
+  padding: 1.5rem;
+  width: 220px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.beneficio i {
+  font-size: 2rem;
+  color: #40916c;
+  margin-bottom: 0.5rem;
+}
+
+/* Contato estilizado */
+#contato {
+  background: #fff;
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  max-width: 700px;
+  margin: 4rem auto;
+}
+
+#contato h2 {
+  color: #2d6a4f;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+#contato form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#contato input,
+#contato textarea {
+  padding: 0.9rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+#contato input:focus,
+#contato textarea:focus {
+  border: 2px solid #2d6a4f;
+  outline: none;
+}
+
+#contato button {
+  background: #2d6a4f;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#contato button:hover {
+  background: #1b4332;
+}
+
+/* Footer */
+
+footer {
+  background: #2d6a4f;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto; 
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}

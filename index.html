@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PANC Smart - Estufa Inteligente</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo"><img src="/Imagens e Videos/PANC (Apresentação).png" alt="LogoTipo PancSmart"></div>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#como-funciona">Como Funciona</a>
+      <a href="#beneficios">Benefícios</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="header-actions">
+      <a href="https://www.instagram.com/panc_smart?igsh=MWliaXB5cXR1ajRlOA==" target="_blank" class="icon-instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="#contato" class="btn-header">Quero Conhecer</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Cultive saúde, tecnologia e sustentabilidade</h1>
+      <p>A primeira estufa inteligente projetada para o cultivo de PANCs.</p>
+      <a href="#sobre" class="btn-primary">Saiba Mais</a>
+    </div>
+    <div class="hero-img">
+      <img src="/Imagens e Videos/Estufa.webp" alt="Estufa inteligente">
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="sobre">
+    <h2>O que são PANCs?</h2>
+    <p>Plantas Alimentícias Não Convencionais (PANCs) são espécies ricas em nutrientes e pouco exploradas na alimentação do dia a dia.</p>
+    <div class="cards">
+      <div class="card">
+        <img src="/Imagens e Videos/Ora-pro-Nóbis.webp" alt="Ora-pro-nóbis">
+        <h3>Ora-pro-nóbis</h3>
+        <p>Rica em proteínas e muito usada na culinária mineira.</p>
+      </div>
+      <div class="card">
+        <img src="/Imagens e Videos/Taioba.webp" alt="Taioba">
+        <h3>Taioba</h3>
+        <p>Fonte de ferro e vitaminas, perfeita para refogados.</p>
+      </div>
+      <div class="card">
+        <img src="/Imagens e Videos/Beldroega.webp" alt="Beldroega">
+        <h3>Beldroega</h3>
+        <p>Contém ômega 3 natural, ideal para saladas frescas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como funciona -->
+  <section id="como-funciona" class="como-funciona">
+    <h2>Como funciona a PANC Smart?</h2>
+    <div class="steps">
+      <div class="step">
+        <i class="fa-solid fa-microchip"></i>
+        <h3>Sensores Inteligentes</h3>
+        <p>Monitoram luz, umidade e temperatura em tempo real.</p>
+      </div>
+      <div class="step">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <h3>Aplicativo Integrado</h3>
+        <p>Acompanhe o crescimento das plantas pelo celular.</p>
+      </div>
+      <div class="step">
+        <i class="fa-solid fa-bell"></i>
+        <h3>Alertas Automáticos</h3>
+        <p>Receba notificações para regar ou ajustar a estufa.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefícios -->
+  <section id="beneficios" class="beneficios">
+    <h2>Benefícios</h2>
+    <div class="grid-beneficios">
+      <div class="beneficio">
+        <i class="fa-solid fa-droplet"></i>
+        <h3>Economia de Água</h3>
+        <p>Irrigação automatizada que reduz desperdícios.</p>
+      </div>
+      <div class="beneficio">
+        <i class="fa-solid fa-leaf"></i>
+        <h3>Saúde e Nutrição</h3>
+        <p>PANCs são superalimentos que fortalecem sua dieta.</p>
+      </div>
+      <div class="beneficio">
+        <i class="fa-solid fa-city"></i>
+        <h3>Agricultura Urbana</h3>
+        <p>Ideal para hortas comunitárias e ambientes urbanos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato">
+    <h2>Entre em contato</h2>
+    <form id="form-contato">
+      <input type="text" placeholder="Seu nome" name="nome" required>
+      <input type="email" placeholder="Seu e-mail" name="email" required>
+      <textarea placeholder="Sua mensagem" name="mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Footer --> 
+  <footer>
+    <p>🌱 PANC Smart - Projeto acadêmico de estufa inteligente para PANCs.</p>
+  </footer>
+
+  <!-- Script EmailJS -->
+  <script>
+    // Inicializa o EmailJS
+    (function(){
+      emailjs.init("eMjHeE8fk8H_nMWIp"); 
+    })();
+
+    document.getElementById("form-contato").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm("service_mhi3keb", "template_co1o0go", this)
+        .then(() => {
+          alert("✅ Mensagem enviada com sucesso!");
+          this.reset();
+        }, (err) => {
+          console.error("Erro:", err);
+          alert("❌ Erro ao enviar mensagem, tente novamente.");
+        });
+    });
+  </script>
+</body>
+</html>
